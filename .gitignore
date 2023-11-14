@@ -1,0 +1,10 @@
+.env
+.env.test
+/log
+/keys
+cover.out
+cover.html
+/.cover
+.dockerignore
+docker-compose.yml
+Dockerfile

@@ -1,0 +1,1419 @@
+{
+	"info": {
+		"_postman_id": "269648ff-f4c8-4685-8a64-211226f94ad6",
+		"name": "Gost Project Docs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16420382"
+	},
+	"item": [
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"your_valid_active@gmail.com\",\r\n    \"password\": \"password00\",\r\n    \"is_admin\": true // if false -> user\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user-management/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user-management",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9009/user-management/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9009",
+							"path": [
+								"user-management",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/user-management/?page=1&limit=100&search=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user-management",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe Key\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user-management/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user-management",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user-management/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user-management",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "CRUD User without authentication."
+		},
+		{
+			"name": "Development",
+			"item": [
+				{
+					"name": "Ping SQL DB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/ping/db",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"ping",
+								"db"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ping Redis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/ping/redis",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"ping",
+								"redis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Panic Handler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/panic",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"panic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set to Redis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/storing-to-redis",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"storing-to-redis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get from Redis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/get-from-redis",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"get-from-redis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "_Test New Role (unused)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ1bnN1cmx1a21hbkBnbWFpbC5jb20iLCJyb2xlIjoibmV3LXJvbGUtMDAyIiwicGVybWlzc2lvbnMiOnsiMyI6Mjh9LCJleHAiOjE3MDA0NjAyMDIsIm5iZiI6MTY5OTYwMTAwMn0.WO9OnVLct8Ta-u3fuC5TZPzgwviFiEWvtALplsF_KNpH_LoGujjB_Aa55_eHaIQwg0b1Wycb4ntaojSG40Wiut7LN9Uizb17Je1ewUw7HZmZp-HU7dWvRDYi68FvCP1ra0VZ1BnFzs8d8gYzPJ0oUtRBs3oySJTULZaW_zN07M8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/test-new-role",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"test-new-role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "_Test New Permission (unused)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJ1bnN1cmx1a21hbkBnbWFpbC5jb20iLCJyb2xlIjoibmV3LXJvbGUtMDAyIiwicGVybWlzc2lvbnMiOnsiMyI6Mjh9LCJleHAiOjE3MDA0NjAyMDIsIm5iZiI6MTY5OTYwMTAwMn0.WO9OnVLct8Ta-u3fuC5TZPzgwviFiEWvtALplsF_KNpH_LoGujjB_Aa55_eHaIQwg0b1Wycb4ntaojSG40Wiut7LN9Uizb17Je1ewUw7HZmZp-HU7dWvRDYi68FvCP1ra0VZ1BnFzs8d8gYzPJ0oUtRBs3oySJTULZaW_zN07M8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/test-new-permission",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"test-new-permission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Files",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<API TOKEN>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"limit\": 9999,\r\n    \"offset\": 1,\r\n    \"prefix\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://SECRET-UNIQUE-STRING.supabase.co/storage/v1/object/list/user_upload_public",
+							"protocol": "https",
+							"host": [
+								"SECRET-UNIQUE-STRING",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"storage",
+								"v1",
+								"object",
+								"list",
+								"user_upload_public"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Files API",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/get-files-list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"get-files-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload File",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<API AUTH>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Lenovo/OneDrive/Desktop/Sec/Best Practices for MITRE ATT&CK Mapping.pdf"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://tntrwzoefhqqauzrttpe.supabase.co/storage/v1/object/user_upload_public/Best Practices for MITRE ATT&CK Mapping.pdf",
+							"protocol": "https",
+							"host": [
+								"tntrwzoefhqqauzrttpe",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"storage",
+								"v1",
+								"object",
+								"user_upload_public",
+								"Best Practices for MITRE ATT&CK Mapping.pdf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload File API",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Lenovo/OneDrive/Desktop/Sec/Hack Book/cyber-security.pdf"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/upload-file",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"upload-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove File",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<API AUTH>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prefixes\": \"Best Practices for MITRE ATT&CK Mapping.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://tntrwzoefhqqauzrttpe.supabase.co/storage/v1/object/user_upload_public",
+							"protocol": "https",
+							"host": [
+								"tntrwzoefhqqauzrttpe",
+								"supabase",
+								"co"
+							],
+							"path": [
+								"storage",
+								"v1",
+								"object",
+								"user_upload_public"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove File API",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file_name\": \"uploaded-file.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/development/remove-file",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"development",
+								"remove-file"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "StartFragmentDevelopment Routes provides experimental/ developing/ testingfor routes, middleware, connection and many more without JWT authentication in header.\n\nSo, don't forget to commentedon the line of code that routes **getDevopmentRouterin the app.go.**"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"your_valid_email@gmail.com\", // your valid & active email\r\n    \"password\": \"password00\",\r\n    \"role_id\": 1\r\n    // role_id 1 == admin, 2 == user, see at database/migration golang-code.\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verification / Account Activation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"your_valid_email@gmail.com\", // your valid & active email\r\n    \"code\": \"QQFjl5ZNSEmrfGK6OOoF1\" // check your email inbox/ spam\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/verification",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Req. Delete Account from Activation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"lukmanernandi16@gmail.com\",\r\n    \"code\": \"qJtHrTP1Yzy6N9UcgL8e0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/request-delete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"request-delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"your_valid_email@gmail.com\", // your valid & active email\r\n    \"password\": \"password00\",\r\n    \"ip\": \"128.0.0.18\"\r\n    // After login you can copy-paste the token to https://jwt.io/ too see \r\n    // and understand the structure of claims struct (see internal/middleware).\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"your_valid_email@gmail.com\", // your valid & active email\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/forget-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"your_valid_email@gmail.com\", // your valid & active email\r\n    \"code\": \"uH7b9bKO4kxY96NYwuQPQ\", // check your email inbox / spam\r\n    \"new_password\": \"password99\",\r\n    \"new_password_confirm\": \"password99\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/reset-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/my-profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"my-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe (updated)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/profile-update",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"profile-update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"password00\",\r\n    \"new_password\": \"password000\", // should different with old passwd\r\n    \"new_password_confirm\": \"password000\" // should equal with new passwd\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/user/update-password",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"user",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "StartFragmentUser Management Routes provides create, read (get & getAll), update, anddelete functionalities for user data management without JWT authenticationin header. So, don't forget to commented on the line of code that routesgetUserManagementRoutes in the app.go."
+		},
+		{
+			"name": "Role and Permission",
+			"item": [
+				{
+					"name": "Create Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<Token>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new-role-001\",\r\n    \"description\": \"new-role-001 description\",\r\n    \"permissions_id\": [1, 2, 3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/role",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connect Role to Permissions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role_id\": 3,\r\n    \"permissions_id\": [19,20,21]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/role/connect",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"role",
+								"connect"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/role/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"role",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWttYW5lcm5hbmRpMTZAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOnsiMSI6MjU1LCIyIjoyNTUsIjMiOjE1fSwiZXhwIjoxNzAwNDYwNTY1LCJuYmYiOjE2OTk2MDEzNjV9.XdcZVnEmedlaYhWgNjGYPJn9tm9H4jEbkleIKCoE5bDqGj5Zcv4UjSebkCWOCSzNpiCEMVsePuXgW8bRn9r6JDgCAXgsneUvVJHIXwh5FmtOghqXU8E06PsJ2ajkkiSqR9yFh_xI2AsQ6TKk-RM_-DfeRZKt9uryZ5Iur_gaL9M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/role?page=1&limit=20&search=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"role"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWttYW5lcm5hbmRpMTZAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOnsiMSI6MjU1LCIyIjoyNTUsIjMiOjE1fSwiZXhwIjoxNzAwNDYwNTY1LCJuYmYiOjE2OTk2MDEzNjV9.XdcZVnEmedlaYhWgNjGYPJn9tm9H4jEbkleIKCoE5bDqGj5Zcv4UjSebkCWOCSzNpiCEMVsePuXgW8bRn9r6JDgCAXgsneUvVJHIXwh5FmtOghqXU8E06PsJ2ajkkiSqR9yFh_xI2AsQ6TKk-RM_-DfeRZKt9uryZ5Iur_gaL9M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"admin-update\",\r\n    \"description\": \"description menyusul saja ya ...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/role/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"role",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWttYW5lcm5hbmRpMTZAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwicGVybWlzc2lvbnMiOnsiMSI6MjU1LCIyIjoyNTUsIjMiOjE1fSwiZXhwIjoxNzAwNDYwNTY1LCJuYmYiOjE2OTk2MDEzNjV9.XdcZVnEmedlaYhWgNjGYPJn9tm9H4jEbkleIKCoE5bDqGj5Zcv4UjSebkCWOCSzNpiCEMVsePuXgW8bRn9r6JDgCAXgsneUvVJHIXwh5FmtOghqXU8E06PsJ2ajkkiSqR9yFh_xI2AsQ6TKk-RM_-DfeRZKt9uryZ5Iur_gaL9M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/role/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"role",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new-permission-001\",\r\n    \"description\": \"new-permission-001 Description\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/permission",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"permission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJleGFtcGxlMkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsInBlcm1pc3Npb25zIjpbImNyZWF0ZS11c2VyIiwidmlldy11c2VyIiwidXBkYXRlLXVzZXIiLCJkZWxldGUtdXNlciIsImNyZWF0ZS1yb2xlIiwidmlldy1yb2xlIiwidXBkYXRlLXJvbGUiLCJkZWxldGUtcm9sZSIsImNyZWF0ZS11c2VyLWhhcy1yb2xlIiwidmlldy11c2VyLWhhcy1yb2xlIiwidXBkYXRlLXVzZXItaGFzLXJvbGUiLCJkZWxldGUtdXNlci1oYXMtcm9sZSIsImNyZWF0ZS1wZXJtaXNzaW9uIiwicmVhZC1wZXJtaXNzaW9uIiwidXBkYXRlLXBlcm1pc3Npb24iLCJkZWxldGUtcGVybWlzc2lvbiIsImNyZWF0ZS1yb2xlLWhhcy1wZXJtaXNzaW9ucyIsInZpZXctcm9sZS1oYXMtcGVybWlzc2lvbnMiLCJ1cGRhdGUtcm9sZS1oYXMtcGVybWlzc2lvbnMiLCJkZWxldGUtcm9sZS1oYXMtcGVybWlzc2lvbnMiLCJjcmVhdGUtb25lIiwidmlldy1vbmUiLCJ1cGRhdGUtb25lIiwiZGVsZXRlLW9uZSIsImNyZWF0ZS10d28iLCJ2aWV3LXR3byIsInVwZGF0ZS10d28iLCJkZWxldGUtdHdvIiwiY3JlYXRlLXRocmVlIiwidmlldy10aHJlZSIsInVwZGF0ZS10aHJlZSIsImRlbGV0ZS10aHJlZSIsImNyZWF0ZS1mb3VyIiwidmlldy1mb3VyIiwidXBkYXRlLWZvdXIiLCJkZWxldGUtZm91ciIsImNyZWF0ZS1maXZlIiwidmlldy1maXZlIiwidXBkYXRlLWZpdmUiLCJkZWxldGUtZml2ZSIsImNyZWF0ZS1zaXgiLCJ2aWV3LXNpeCIsInVwZGF0ZS1zaXgiLCJkZWxldGUtc2l4IiwiY3JlYXRlLXNldmVuIiwidmlldy1zZXZlbiIsInVwZGF0ZS1zZXZlbiIsImRlbGV0ZS1zZXZlbiJdLCJsYWJlbCI6bnVsbCwiZXhwIjoxNjk3OTQyNDkxLCJuYmYiOjE2OTcwODMyOTF9.ZMVHIXp9-e5JgTQxT2xf-exZlUc3b04gTAJy-kBIylAFHf92tmDrRvYt6o4z8UKGvu5OiUskSEplXPQ4h1cOAjV6g3JE4Zs8GBdj4t453rt7G54j7a2eDAd1Wv6bhLQvx-LtX_vGQHFWcW4ivz-p0FvUe5BP57S3ONXgb1P8ORk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/permission/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"permission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Permissions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:9009/permission?page=1&limit=20&search=",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"permission"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update\",\r\n    \"description\": \"xxx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/permission/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"permission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Permission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "<ActiveToken>",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9009/permission/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9009",
+							"path": [
+								"permission",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "StartFragmentRole-Permission Routes provides des create, read (get & getAll), update, anddelete functionalities for Role and Permission entities including connectingboth of them. This routes can be access by user that has admin-role (see database/migration)."
+		}
+	]
+}
